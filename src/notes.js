@@ -20,7 +20,7 @@ export const findNotes = async (filter) => {
 };
 
 export const removeNote = async (id) => {
-  const { notes } = await getDB();
+  const notes = await getAllNotes();
   const match = notes.find((note) => note.id === id);
 
   if (match) {
